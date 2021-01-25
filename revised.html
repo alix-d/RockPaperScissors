@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://kit.fontawesome.com/241f252840.js" crossorigin="anonymous"></script>
+
+    <script src='script.js'></script>
+</head>
+
+<body>
+    <div id='viewport'>
+
+        <section id='header'>
+            <h1 id='title'>Rock Paper Scissors</h1>
+        </section>
+
+        <div id='middle'>
+            <section id='playerChoice' class='card'>
+                <h1 class='playTitle'>Choose Wisely!</h1>
+                <div id='playChoices' class='choices'>
+                    <button class='btn' id='pc1' onclick='userClicksRock()'><i class='fa fa-hand-rock'></i></button>
+                    <button class='btn' id='pc2' onclick='userClicksPaper()'><i class='fa fa-paper-plane'></i></button>
+                    <button class='btn' id='pc3' onclick='userClicksScissors()'><i class='fa fa-cut'></i></button>
+                </div>
+            </section>
+
+            <section id='scoreboard' class='card'>
+                <h1 class='playTitle'>Scoreboard</h1>
+                <div id = 'scores' class='choices'>
+                    <p id='playerScore' class='score'>Player Score:</p>
+                    <div class='scoreContainer'>
+                        <p id='playerScoreValue' class='actualScore'>0</p>
+                    </div>
+                    <p id='computerScore' class='score'>Computer Score: </p> 
+                    <div class='scoreContainer'>          
+                        <p id='computerScoreValue' class='actualScore'>0</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id='computerChoice' class='card'>
+                <h1 class='playTitle'>Computer:</h1>
+                <div id = 'compChoices' class='choices'></div>
+                    <div class='cc'><i id='cc1' class='fa fa-hand-rock'></i></div>
+                    <div class='cc'><i id='cc2' class='fa fa-paper-plane'></i></div>
+                    <div class='cc'><i id='cc3' class='fa fa-cut'></i></div>
+                </div>
+            </section>
+
+            <div id='endGame'>
+                <p id='result' class='winLose'>You Lose!</p>
+                <div id='btnContainer'>
+                    <button class='btn' id='nextRound' onclick='nextRound()'>Next Round</button>
+                    <button class='btn' id='reset' onclick='resetGame()'>Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>

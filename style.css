@@ -1,0 +1,190 @@
+/* class selector = . | id selector = # */
+
+/*CSS Reset*/
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 13px;
+}
+
+/*entire window*/
+#viewport {
+    position: absolute;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #FFAFBD, #ffc3a0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*webpage title container*/
+#header {
+    position: relative;
+    min-height: 5vh;
+    min-width: 100vw;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*webpage title*/
+#title {
+    color:rgba(255,0,0,0.6);
+    font-size: 3.5rem;
+}
+
+/*3 cards container*/
+#middle {
+    position: relative;
+    min-height: 65vh;
+    min-width: 80vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*individual cards*/
+.card {
+    min-height: 40vh;
+    min-width: 20vw;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.25), rgba(255,255,255, 0.1));
+    border-color: white;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+/*card titles*/
+.playTitle {
+    min-height: 5vh;
+    margin-top: 1rem;
+    font-size: 1.55rem;
+    color:rgba(255,0,0,0.75);
+}
+
+/*card - body items*/
+.choices {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* player & computer score display*/
+.scoreContainer {
+    min-height: 5vh;
+    min-width: 10vw;
+    margin-top: 1rem;
+    margin-bottom: 2.75rem;
+    border-color: white;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*score value text*/
+.actualScore {
+    color: white;
+    font-size: 2em;
+}
+
+/*player & computer score titles*/
+.score {
+    font-size: 1.3rem;
+    color: rgba(255,0,0,6);
+}
+
+/*buttons on player side & computer choices on right side*/
+.btn, #cc1, #cc2, #cc3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    width: 6rem;
+    height: 6rem;
+    border: 0;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    font-size: 3rem;
+}
+
+/*all icons*/
+i {
+    font-size: 3rem;
+}
+
+/*button hover animation*/
+.btn:hover {
+    cursor: pointer;
+    background: rgba(255,255,255,0.7);
+    transform:scale(1.1);
+    transition: 0.5s;
+}
+
+/*bottom section*/
+#endGame {
+    position: relative;
+    margin-top: -3em;
+    min-width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*result indicator*/
+#result {
+    color: white;
+    /*visibility: hidden;*/
+    font-size: 5em;
+}
+
+/*button container*/
+#btnContainer {
+    min-width: 50vw;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*play again button*/
+#reset, #nextRound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+    border-radius: 15px;
+    width: 20rem;
+    color: red;
+    font-size: 3em;
+}
+
+/*emphasize final choices*/
+.finalChoice {
+    transform: scale(1.25);
+    background-color: white;
+    transition: .5s;
+}
+
+/*revert button transition*/
+.revertTransform {
+    transform: scale(1);
+    background: rgba(255,255,255,0.3);
+}
+
+/*user wins or loses*/
+.gameResult {
+    color: red;
+}
